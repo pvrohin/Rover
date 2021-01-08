@@ -1,0 +1,7 @@
+<launch>
+	<!-- Convert depth image to laser scan -->
+	<node name="depthimage_to_laserscan" pkg="depthimage_to_laserscan" type="depthimage_to_laserscan" > 
+	  	<remap from="image" to="/camera/depth/image_rect_raw"/>
+	  	<remap from="camera_info" to="/camera/depth/camera_info"/>
+     </node>
+</launch>
