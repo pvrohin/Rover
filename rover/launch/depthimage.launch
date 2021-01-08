@@ -1,0 +1,25 @@
+
+<launch>
+
+    <arg name="camera" default="camera" />
+    <arg name="scan_topic" default="scan"/>
+    <arg name="depth" default="depth"/>
+
+    <!-- start sensor-->
+      <include file="$(find realsense2_camera)/launch/rs_camera.launch"/>
+	<param name="align_depth" value="true"/>
+
+    <node pkg="depthimage_to_laserscan" type="depthimage_to_laserscan" name="depthimage_to_laserscan">
+
+      <!-- Pixel rows to use to generate the laserscan. For each column, the scan will return the minimum value for those pixels centered vertically in the image. -->
+      <param name="scan_height" value="5"/>
+      <param name="output_frame_id" value="/$(arg camera)_depth_frame"/>
+      <param name="range_min" value="0.45"/>
+      <param name="scan_time" value="0.1"/>
+      <remap from="image" to="$(arg camera)/$(arg depth)/image_rect_raw"/>
+      <remap from="scan" to="$(arg scan_topic)"/>
+    </node>
+
+    <node pkg="tf" type="static_transform_publisher" name="image_to_scan_broadcaster" args="0 0 0 0 0 0 \/camera_depth_frame camera 100" />
+
+</launch>

@@ -1,0 +1,315 @@
+<?xml version="1.0"?>
+<robot name ="robot">
+  
+ <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="0.508 1.057 0.06"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+     <collision>
+      <geometry>
+        <box size="0.508 1.057 0.12"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.015" iyy="0.0375" izz="0.0375" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+  
+  <link name="front_wheel_left_axel">
+    <visual>
+      <geometry>
+        <box size="0.3 .1 0.06"/>
+      </geometry>
+      <origin rpy="3.14 0 0" xyz="0 0 0"/>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+  </link>
+  
+    <link name="middle_wheel_left_axel">
+    <visual>
+      <geometry>
+        <box size="0.3 .1 0.06"/>
+      </geometry>
+      <origin rpy="3.14 0 0" xyz="0 0 0"/>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+  </link>
+  
+    <link name="back_wheel_left_axel">
+    <visual>
+      <geometry>
+        <box size="0.3 .1 0.06"/>
+      </geometry>
+      <origin rpy="3.14 0 0" xyz="0 0 0"/>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+  </link>
+  
+  
+  <link name="front_wheel_right_axel">
+    <visual>
+      <geometry>
+        <box size="0.3 .1 0.06"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+  </link>
+  
+    <link name="middle_wheel_right_axel">
+    <visual>
+      <geometry>
+        <box size="0.3 .1 0.06"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+  </link>
+  
+    <link name="back_wheel_right_axel">
+    <visual>
+      <geometry>
+        <box size="0.3 .1 0.06"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+  </link>
+  
+ <link name="fl_wheel">
+   <visual>
+     <geometry>
+        <cylinder length="0.10" radius="0.127"/>
+      </geometry>
+      <origin rpy="0 1.5708 0" xyz="0 0 0"/>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+     <collision>
+      <geometry>
+        <cylinder length="0.1" radius="0.127"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <inertia ixx="5.1458e-5" iyy="5.1458e-5" izz="6.125e-5" ixy="0" ixz="0" iyz="0"/>
+</inertial>
+ </link>
+  
+   <link name="ml_wheel">
+   <visual>
+     <geometry>
+        <cylinder length="0.10" radius="0.127"/>
+      </geometry>
+      <origin rpy="0 1.5708 0" xyz="0 0 0"/>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+      <collision>
+      <geometry>
+        <cylinder length="0.1" radius="0.127"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <inertia ixx="5.1458e-5" iyy="5.1458e-5" izz="6.125e-5" ixy="0" ixz="0" iyz="0"/>
+</inertial>
+ </link>
+  
+   <link name="bl_wheel">
+   <visual>
+     <geometry>
+        <cylinder length="0.10" radius="0.127"/>
+      </geometry>
+      <origin rpy="0 1.5708 0" xyz="0 0 0"/>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+      <collision>
+      <geometry>
+        <cylinder length="0.1" radius="0.127"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <inertia ixx="5.1458e-5" iyy="5.1458e-5" izz="6.125e-5" ixy="0" ixz="0" iyz="0"/>
+</inertial>
+ </link>
+  
+   
+ <link name="fr_wheel">
+   <visual>
+     <geometry>
+        <cylinder length="0.10" radius="0.127"/>
+      </geometry>
+      <origin rpy="0 1.5708 0" xyz="0 0 0"/>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+     <collision>
+      <geometry>
+        <cylinder length="0.1" radius="0.127"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <inertia ixx="5.1458e-5" iyy="5.1458e-5" izz="6.125e-5" ixy="0" ixz="0" iyz="0"/>
+</inertial>
+ </link>
+  
+   <link name="mr_wheel">
+   <visual>
+     <geometry>
+        <cylinder length="0.10" radius="0.127"/>
+      </geometry>
+      <origin rpy="0 1.5708 0" xyz="0 0 0"/>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+      <collision>
+      <geometry>
+        <cylinder length="0.1" radius="0.127"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <inertia ixx="5.1458e-5" iyy="5.1458e-5" izz="6.125e-5" ixy="0" ixz="0" iyz="0"/>
+</inertial>
+ </link>
+  
+   <link name="br_wheel">
+   <visual>
+     <geometry>
+        <cylinder length="0.10" radius="0.127"/>
+      </geometry>
+      <origin rpy="0 1.5708 0" xyz="0 0 0"/>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+       <collision>
+      <geometry>
+        <cylinder length="0.1" radius="0.127"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <inertia ixx="5.1458e-5" iyy="5.1458e-5" izz="6.125e-5" ixy="0" ixz="0" iyz="0"/>
+</inertial>
+ </link>
+  
+  
+  <joint name="front_left_jointconnect" type="fixed">
+       <parent link="base_link"/>
+       <child link="front_wheel_left_axel"/>
+      <origin xyz="0.15 -0.5285 0"/>
+  </joint>
+  
+   <joint name="middle_left_jointconnect" type="fixed">
+       <parent link="base_link"/>
+       <child link="middle_wheel_left_axel"/>
+      <origin xyz="0.15 0 0"/>
+  </joint>
+  
+   <joint name="back_left_jointconnect" type="fixed">
+       <parent link="base_link"/>
+       <child link="back_wheel_left_axel"/>
+      <origin xyz="0.15 0.5285 0"/>
+  </joint>
+  
+  <joint name="front_right_jointconnect" type="fixed">
+       <parent link="base_link"/>
+       <child link="front_wheel_right_axel"/>
+      <origin xyz="-0.15 -0.5285 0"/>
+  </joint>
+  
+   <joint name="middle_right_jointconnect" type="fixed">
+       <parent link="base_link"/>
+       <child link="middle_wheel_right_axel"/>
+      <origin xyz="-0.15 0 0"/>
+  </joint>
+  
+   <joint name="back_right_jointconnect" type="fixed">
+       <parent link="base_link"/>
+       <child link="back_wheel_right_axel"/>
+      <origin xyz="-0.15 0.5285 0"/>
+  </joint>
+  
+    <joint name="front_left_wheelconnect" type="continuous">
+       <axis xyz="1 0 0"/>
+       <parent link="base_link"/>
+       <child link="fl_wheel"/>
+      <origin xyz="0.3 0.5285 0"/>
+  </joint>
+  
+    <joint name="back_left_wheelconnect" type="continuous">
+       <axis xyz="1 0 0"/>
+       <parent link="base_link"/>
+       <child link="bl_wheel"/>
+      <origin xyz="0.3 -0.5285 0"/>
+  </joint>
+  
+    <joint name="middle_left_wheelconnect" type="continuous">
+       <axis xyz="1 0 0"/>
+       <parent link="base_link"/>
+       <child link="ml_wheel"/>
+      <origin xyz="0.3 0 0"/>
+  </joint>
+  
+   <joint name="front_right_wheelconnect" type="continuous">
+      <axis xyz="1 0 0"/>
+       <parent link="base_link"/>
+       <child link="fr_wheel"/>
+      <origin xyz="-0.3 0.5285 0"/>
+  </joint>
+  
+    <joint name="back_right_wheelconnect" type="continuous">
+       <axis xyz="1 0 0"/>
+       <parent link="base_link"/>
+       <child link="br_wheel"/>
+      <origin xyz="-0.3 -0.5285 0"/>
+  </joint>
+  
+    <joint name="middle_right_wheelconnect" type="continuous">
+       <axis xyz="1 0 0"/>
+       <parent link="base_link"/>
+       <child link="mr_wheel"/>
+      <origin xyz="-0.3 0 0"/>
+  </joint>
+  
+    <gazebo>
+    <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+      <leftJoint>middle_left_wheelconnect</leftJoint>
+      <rightJoint>middle_right_wheelconnect</rightJoint>
+      <robotBaseFrame>base_link</robotBaseFrame>
+      <wheelSeparation>0.6</wheelSeparation>
+      <wheelDiameter>0.254</wheelDiameter>
+      <publishWheelJointState>true</publishWheelJointState>
+    </plugin>
+  </gazebo>
+
+  
+</robot>
