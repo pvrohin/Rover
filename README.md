@@ -11,5 +11,5 @@ Autonomous Navigation for a 6 wheel Differential Drive Rover designed for the In
 
 2) Given arrow markers(with fixed dimensions),navigate accordinglly following the markers (for eg : Left marker implies the rover has to turn left and continue navigation).
 
-![alt text](https://github.com/pvrohin/Rover/blob/master/rover/rover_competition.jpeg)
+![alt text](https://github.com/pvrohin/Rover/blob/master/picture.jpeg)
 
